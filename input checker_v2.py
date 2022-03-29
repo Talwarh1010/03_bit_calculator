@@ -1,4 +1,5 @@
-# checks users choice is 'integer', 'text', or 'image'
+# users response
+
 def user_choice():
     
     # Lists of valid responses
