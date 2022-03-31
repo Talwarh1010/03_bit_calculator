@@ -3,7 +3,7 @@
 def user_choice():
     
     # Lists of valid responses
-    text_ok = ["text", "t", "txt," ]
+    text_ok = ["text", "t", "txt" ]
     integer_ok = ["integer", "int", "#", "number"]
     image_ok = ["image", "img", "pix", "picture", "pic"]
     
@@ -25,7 +25,7 @@ def user_choice():
             return "image"
             
         elif response == "i":
-            want_integer = input("Press enter for an integer or any key for image")
+            want_integer = input("Press enter for an integer or  press any key then enter for image")
             if want_integer == "":
                 return "integer"
             else:
