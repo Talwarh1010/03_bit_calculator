@@ -25,3 +25,17 @@ def num_check(question, low):
             
             
             
+# Main Routine goes here
+
+keep_going = ""   
+while keep_going == "":
+    print()
+    # ask user for an integer (must be more than / equal to 0)
+    var_integer = num_check("Enter a integer: ", 0)
+    print()
+    
+    # ask for width & height of an image
+    # (must be more than / equal to 1)
+    image_width = num_check("Image width?", 1)
+    print()
+    image_height = num_check("image height?", 1)
