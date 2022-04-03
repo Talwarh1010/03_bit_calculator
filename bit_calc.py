@@ -80,6 +80,71 @@ def num_check(question, low):
             
             
             
+# calculates the 3 of bits for text (# of characters x 8)
+def text_bits():
+    
+    print()
+    # ask user for a string...
+    var_text = input("Enter some text: ")
+    
+    # calculates # of bits (length of string x 4)
+    var_length = len(var_text)
+    num_bits = 8 * var_length
+    
+    # output answer with working
+    print()
+    print("\'{}\'has {} characters ...". format(var_text, var_length))
+    print(" # of bits is {} x 8...  ". format(var_length))
+    print("We need {} bits to represent {}". format(num_bits, var_text))
+    print()
+    
+    return ""
+
+# finds number of bits for 24 bit colour
+def image_bits():
+    
+    
+    
+    # asks the user for the image height and width
+    image_height = num_check("Image height: ",1) 
+    image_width = num_check("image width: ",1)
+    
+    # Number of pixels = width x height
+    image_pix = image_height * image_width
+    
+    # number of bits = pixels x 24
+    image_bit = image_pix * 24
+    
+    # output results
+    print()
+    print("# of pixels = {} x {} = {}". format(image_height,
+                                                image_width, image_pix))
+    print("# of bits = {} x 24 = {}".format(image_pix, image_bit))
+    
+    return ""
+
+# converts decimal to binary and states how
+# many bits are needed to represent the original integer
+def integer_bits():
+    
+    # get integer (must be >= 0)    
+    var_integer = num_check("Please enter an integer: ", 0)
+    
+    # converting integr to binary
+    var_binary = "{0:b}". format(var_integer)
+    
+    # calculates # of bits (length of string above)
+    num_bits = len(var_binary)
+    
+    # output answers with working
+    print()
+    print("{} in binary is {}".format(var_integer, var_binary))
+    print("# of bits  is {}".format(num_bits))
+    
+    return ""
+
+
+
 
 # Main routine goes here
 
@@ -98,16 +163,18 @@ while keep_going == "":
 
     # For integers, ask for integer
     if data_type =="integer":
-        var_integer = num_check("Enter a integer: ", 0)
+        integer_bits()
     
     # For images, ask for width and height    
     # (must be an integer more than / equal to 0)
     elif  data_type == "image":
-        image_width = num_check("image width? ", 1)
-        print()
-        image_height = num_check("image height? ", 1)
+        image_bits()
+        
 
     # for text, ask for a string
     else:
-        var_text = input("enter some text: ")
+        text_bits()
         
+    print()
+    keep_going = input("press <enter> to continue or press any key then enter to quit")
+    print()
