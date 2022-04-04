@@ -165,6 +165,7 @@ def integer_bits():
 statement_generator(" Bit Calculator for integers, Text & Images", "-")
 
 # Display intstructions if user has not used the program before
+
 first_time = input("press <enter> to see the instructions or press any key then enter to continue")
 if first_time == "":
     instructions()
@@ -193,3 +194,4 @@ while keep_going == "":
     print()
     keep_going = input("press <enter> to continue or press any key then enter to quit")
     print()
+print("Thank you for using ^^^^Bit Calculator^^^^")
